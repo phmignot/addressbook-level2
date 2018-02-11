@@ -7,7 +7,6 @@ public class Contact {
     protected boolean isPrivate;
 
     public Contact(){
-        throw new UnsupportedOperationException("This method is to be implemented by child classes");
     }
 
     @Override
