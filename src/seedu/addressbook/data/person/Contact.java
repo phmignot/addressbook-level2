@@ -7,11 +7,8 @@ public class Contact {
     public final String value;
     protected boolean isPrivate;
 
-    public Contact(String information, boolean isPrivate) throws IllegalValueException {
-        String trimmedInformation = information.trim();
-        this.value = trimmedInformation;
-        this.isPrivate = isPrivate;
-        //throw new UnsupportedOperationException("This method is to be implemented by child classes");
+    public Contact(){
+        throw new UnsupportedOperationException("This method is to be implemented by child classes");
     }
 
     @Override
