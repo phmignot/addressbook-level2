@@ -3,11 +3,6 @@ package seedu.addressbook.commands;
 import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.*;
-import seedu.addressbook.data.tag.Tag;
-import seedu.addressbook.data.tag.UniqueTagList;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Edit a person's information from the address book.
@@ -26,21 +21,22 @@ public class EditCommand extends Command {
 
 
 
-    private final Person NewPerson;
-    private final ReadOnlyPerson OldPerson;
-
+    private Person newPerson;
+    private Name NEW_NAME;
+    
     public EditCommand(int targetVisibleIndex,String newName) throws IllegalValueException {
         super(targetVisibleIndex);
-        this.OldPerson = getTargetPerson();
-        this.NewPerson = (Person) OldPerson;
-        this.NewPerson.setName(new Name(newName));
+        this.NEW_NAME= new Name(newName);
     }
     
 
     @Override
     public CommandResult execute() {
         try {
-            addressBook.editPerson(OldPerson,NewPerson);
+            final ReadOnlyPerson OldPerson = getTargetPerson();
+            this.newPerson = (Person) OldPerson;
+            this.newPerson.setName(NEW_NAME);
+            addressBook.editPerson(OldPerson, newPerson);
             return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, OldPerson));
 
         } catch (IndexOutOfBoundsException ie) {
