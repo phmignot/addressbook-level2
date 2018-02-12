@@ -50,22 +50,19 @@ public interface ReadOnlyPerson {
     default String getAsTextShowAll() {
         final StringBuilder builder = new StringBuilder();
         final String detailIsPrivate = "(private) ";
-        builder.append(getPrintableString(getName()))
-                .append(" Phone: ");
+        builder.append(getPrintableString(getName()));
         if (getPhone().isPrivate()) {
             builder.append(detailIsPrivate);
         }
-        builder.append(getPhone())
-                .append(" Email: ");
+        builder.append(getPrintableString(getPhone()));
         if (getEmail().isPrivate()) {
             builder.append(detailIsPrivate);
         }
-        builder.append(getEmail())
-                .append(" Address: ");
+        builder.append(getPrintableString(getEmail()));
         if (getAddress().isPrivate()) {
             builder.append(detailIsPrivate);
         }
-        builder.append(getAddress())
+        builder.append(getPrintableString(getAddress()))
                 .append(" Tags: ");
         for (Tag tag : getTags()) {
             builder.append(tag);
