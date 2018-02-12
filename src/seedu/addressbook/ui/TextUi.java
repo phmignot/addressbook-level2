@@ -169,12 +169,4 @@ public class TextUi {
     private static String getIndexedListItem(int visibleIndex, String listItem) {
         return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);
     }
-
-    String getPrintableString(Printable... printables){
-        final StringBuilder builder = new StringBuilder();
-        for (Printable printable : printables){
-            builder.append(printable.getPrintableString());
-        }
-        return builder.toString();
-    }
 }
