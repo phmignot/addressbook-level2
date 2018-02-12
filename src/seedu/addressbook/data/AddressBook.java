@@ -96,8 +96,9 @@ public class AddressBook {
      *
      * @throws PersonNotFoundException if no such Person could be found.
      */
-    public void editPerson(ReadOnlyPerson OldPerson, Person NewPerson) throws PersonNotFoundException {
-        allPersons.set(OldPerson, NewPerson);
+    public void editPerson(ReadOnlyPerson OldPerson, Person NewPerson) throws PersonNotFoundException,DuplicatePersonException {
+        removePerson(OldPerson);
+        addPerson(NewPerson);
     }
     
     /**
