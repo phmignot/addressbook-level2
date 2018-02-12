@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * Edit a person's information from the address book.
  */
-public class EditNameCommand extends Command {
+public class EditCommand extends Command {
     public static final String COMMAND_WORD = "edit";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's information "
@@ -19,8 +19,6 @@ public class EditNameCommand extends Command {
             + "Parameters: [i]i/INDEX NEW_NAME \n"
             + "Example: " + COMMAND_WORD 
             + "i/1 John Doe ";
-
-    private final Person toEdit;
 
     public EditCommand(int targetVisibleIndex,String name) throws IllegalValueException {
         super(targetVisibleIndex);
