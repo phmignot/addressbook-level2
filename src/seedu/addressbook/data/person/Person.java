@@ -59,6 +59,23 @@ public class Person implements ReadOnlyPerson {
         return new UniqueTagList(tags);
     }
 
+    
+    public void setName(Name newName) {
+        this.name=newName;
+    }
+
+    public void setPhone(Phone newPhone) {
+        this.phone=newPhone;
+    }
+
+    public void setEmail(Email newEmail) {
+        this.email=newEmail;
+    }
+
+    public void setAddress(Address newAddress) {
+        this.address=newAddress;
+    }
+
     /**
      * Replaces this person's tags with the tags in the argument tag list.
      */
