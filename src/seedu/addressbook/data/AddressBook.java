@@ -92,6 +92,15 @@ public class AddressBook {
     }
 
     /**
+     * Edit the (old) person profile to his new person profile.
+     *
+     * @throws PersonNotFoundException if no such Person could be found.
+     */
+    public void editPerson(ReadOnlyPerson OldPerson, Person NewPerson) throws PersonNotFoundException {
+        allPersons.set(OldPerson, NewPerson);
+    }
+    
+    /**
      * Removes the equivalent person from the address book.
      *
      * @throws PersonNotFoundException if no such Person could be found.
