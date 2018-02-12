@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 import seedu.addressbook.data.person.Person;
+import seedu.addressbook.data.person.Printable;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.data.person.UniquePersonList;
 import seedu.addressbook.data.person.UniquePersonList.DuplicatePersonException;
@@ -127,5 +128,13 @@ public class AddressBook {
                 || (other instanceof AddressBook // instanceof handles nulls
                         && this.allPersons.equals(((AddressBook) other).allPersons)
                         && this.allTags.equals(((AddressBook) other).allTags));
+    }
+
+    String getPrintableString(Printable... printables){
+        final StringBuilder builder = new StringBuilder();
+        for (Printable printable : printables){
+            builder.append(printable.getPrintableString());
+        }
+        return builder.toString();
     }
 }
