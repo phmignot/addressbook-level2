@@ -20,7 +20,7 @@ public class EditCommand extends Command {
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Person: %1$s";
     
     private Person newProfile;
-    private ReadOnlyPerson oldProfile;
+    private Person oldProfile;
     private Name NEW_NAME;
     
     public EditCommand(int targetVisibleIndex,String newName) throws IllegalValueException {
@@ -32,11 +32,11 @@ public class EditCommand extends Command {
     @Override
     public CommandResult execute() {
         try {
-            oldProfile = getTargetPerson();
-            newProfile = (Person) oldProfile;
+            oldProfile = (Person) getTargetPerson();
+            newProfile = new Person(oldProfile);
             newProfile.setName(NEW_NAME);
             addressBook.editPerson(oldProfile, newProfile);
-            return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, oldProfile));
+            return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, newProfile));
 
         } catch (IndexOutOfBoundsException ie) {
             return new CommandResult(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);

@@ -75,6 +75,14 @@ public class Person implements ReadOnlyPerson {
     public void setAddress(Address newAddress) {
         this.address=newAddress;
     }
+    
+    public void copyPerson(Person p){
+        setName(p.getName());
+        setPhone(p.getPhone());
+        setEmail(p.getEmail());
+        setAddress(p.getAddress());
+        setTags(p.getTags());
+    }
 
     /**
      * Replaces this person's tags with the tags in the argument tag list.

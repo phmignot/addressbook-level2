@@ -129,12 +129,11 @@ public class UniquePersonList implements Iterable<Person> {
      * @throws PersonNotFoundException if no such person could be found in the list.
      */
 
-    public void edit(ReadOnlyPerson oldProfile, Person newProfile) throws PersonNotFoundException,DuplicatePersonException {
+    public void edit(Person oldProfile, Person newProfile) throws PersonNotFoundException,DuplicatePersonException {
         if (contains(newProfile)) {
             throw new DuplicatePersonException();
         }
-        this.remove(oldProfile);
-        internalList.add(newProfile);
+        oldProfile.copyPerson(newProfile);
     }
 
     /**
