@@ -129,7 +129,7 @@ public class UniquePersonList implements Iterable<Person> {
      */
 
     public void edit(Person oldProfile, Person newProfile) throws DuplicatePersonException {
-        if (contains(newProfile)) {
+        if ((contains(newProfile)) && (!oldProfile.isSamePerson(newProfile))) {
             throw new DuplicatePersonException();
         }
         oldProfile.copyPerson(newProfile);

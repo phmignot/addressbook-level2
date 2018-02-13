@@ -23,7 +23,7 @@ public class EditCommand extends Command {
     private Person oldProfile;
     private Name NEW_NAME;
     
-    public EditCommand(int targetVisibleIndex,String newName) throws IllegalValueException {
+    public EditCommand(String newName, int targetVisibleIndex) throws IllegalValueException {
         super(targetVisibleIndex);
         this.NEW_NAME= new Name(newName);
     }

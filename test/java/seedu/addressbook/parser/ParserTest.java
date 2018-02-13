@@ -16,6 +16,7 @@ import seedu.addressbook.commands.AddCommand;
 import seedu.addressbook.commands.ClearCommand;
 import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.DeleteCommand;
+import seedu.addressbook.commands.EditCommand;
 import seedu.addressbook.commands.ExitCommand;
 import seedu.addressbook.commands.FindCommand;
 import seedu.addressbook.commands.HelpCommand;
@@ -126,6 +127,28 @@ public class ParserTest {
         final String[] inputs = { "view notAnumber ", "view 8*wh12", "view 1 2 3 4 5" };
         final String resultMessage = MESSAGE_INVALID_PERSON_DISPLAYED_INDEX;
         parseAndAssertIncorrectWithMessage(resultMessage, inputs);
+    }
+
+    @Test
+    public void parse_editCommandNoArgs_errorMessage() {
+        final String[] inputs = { "edit", "edit " };
+        final String resultMessage = String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE);
+        parseAndAssertIncorrectWithMessage(resultMessage, inputs);
+    }
+
+    @Test
+    public void parse_editCommandArgsIsNotSingleNumber_errorMessage() {
+        final String[] inputs = { "edit name i/notAnumber ", "delete name i/8*wh12", "delete name i/1 2 3 4 5" };
+        final String resultMessage = MESSAGE_INVALID_PERSON_DISPLAYED_INDEX;
+        parseAndAssertIncorrectWithMessage(resultMessage, inputs);
+    }
+
+    @Test
+    public void parse_editCommandNumericArg_indexParsedCorrectly() {
+        final int testIndex = 1;
+        final String input = "edit name i/" + testIndex;
+        final EditCommand result = parseAndAssertCommandType(input, EditCommand.class);
+        assertEquals(result.getTargetIndex(), testIndex);
     }
 
     @Test

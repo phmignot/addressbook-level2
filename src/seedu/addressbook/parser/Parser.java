@@ -157,7 +157,7 @@ public class Parser {
         }
         try {
             final int targetIndex = Integer.parseInt(matcher.group("targetIndex"));
-            return new EditCommand(targetIndex, matcher.group("name"));
+            return new EditCommand(matcher.group("name"), targetIndex);
         }catch (IllegalValueException ive) {
             return new IncorrectCommand(ive.getMessage());
         }catch (NumberFormatException nfe) {
