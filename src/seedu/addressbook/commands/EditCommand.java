@@ -11,10 +11,10 @@ public class EditCommand extends Command {
     public static final String COMMAND_WORD = "edit";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's name information "
-            + "identified by the index number in the last shown person listing.\n"
+            + "identified by the index number in the last shown person listing. (just the name)\n"
             + "Parameters: NEW_NAME i/INDEX \n"
             + "Example: " + COMMAND_WORD 
-            + "John Doe i/1";
+            + " John Doe i/1";
 
     public static final String MESSAGE_DUPLICATE_PERSON = "You can't change a person into an already existing one in the address book";
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Complete, new profile : %1$s";

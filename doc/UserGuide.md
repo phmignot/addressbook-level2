@@ -65,6 +65,19 @@ Examples:
   Returns `John Doe` but not `john`
 * `find Betsy Tim John`<br>
   Returns Any person having names `Betsy`, `Tim`, or `John`
+  
+### Editing a person : `edit`
+Edit a person's information from the address book. Just the name.<br>
+Format: `edit NEW_NAME i/INDEX`
+
+> Change the name of the person at the specified `INDEX`. 
+  The index refers to the index number shown in the most recent listing.
+
+Examples: 
+* `list`<br>
+  `edit Paul i/2`<br>
+  Edit the name of 2nd person in the address book,
+  If there isn't anybody already named Paul with same phone number.
 
 ### Deleting a person : `delete`
 Deletes the specified person from the address book. Irreversible.<br>
