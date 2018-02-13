@@ -95,9 +95,8 @@ public class AddressBook {
      * Edit the (old) person profile to his new person profile.
      *
      * @throws DuplicatePersonException if the person's new profile matchs with an existing person in the list.
-     * @throws PersonNotFoundException if no such person could be found in the list.
      */
-    public void editPerson(Person oldProfile, Person newProfile) throws PersonNotFoundException,DuplicatePersonException {
+    public void editPerson(Person oldProfile, Person newProfile) throws DuplicatePersonException {
         allPersons.edit(oldProfile,newProfile);
     }
     

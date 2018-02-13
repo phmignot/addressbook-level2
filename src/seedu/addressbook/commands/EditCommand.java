@@ -17,7 +17,7 @@ public class EditCommand extends Command {
             + "John Doe i/1";
 
     public static final String MESSAGE_DUPLICATE_PERSON = "You can't change a person into an already existing one in the address book";
-    public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Person: %1$s";
+    public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Complete, new profile : %1$s";
     
     private Person newProfile;
     private Person oldProfile;
@@ -32,19 +32,20 @@ public class EditCommand extends Command {
     @Override
     public CommandResult execute() {
         try {
-            oldProfile = (Person) getTargetPerson();
-            newProfile = new Person(oldProfile);
-            newProfile.setName(NEW_NAME);
+            InitiateProfiles();
             addressBook.editPerson(oldProfile, newProfile);
             return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, newProfile));
-
         } catch (IndexOutOfBoundsException ie) {
             return new CommandResult(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
-        } catch (UniquePersonList.PersonNotFoundException pnfe) {
-            return new CommandResult(Messages.MESSAGE_PERSON_NOT_IN_ADDRESSBOOK);
         } catch (UniquePersonList.DuplicatePersonException dpe) {
             return new CommandResult(MESSAGE_DUPLICATE_PERSON);
         }
+    }
+    
+    private void InitiateProfiles() throws IndexOutOfBoundsException {
+        oldProfile = (Person) getTargetPerson();
+        newProfile = new Person(oldProfile);
+        newProfile.setName(NEW_NAME);
     }
 }
 
