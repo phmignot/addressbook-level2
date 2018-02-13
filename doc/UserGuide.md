@@ -77,7 +77,7 @@ Examples:
 * `list`<br>
   `edit Paul i/2`<br>
   Edit the name of 2nd person in the address book,
-  If there isn't anybody already named Paul with same phone number.
+  If there isn't anybody already named Paul with same others profile information.
 
 ### Deleting a person : `delete`
 Deletes the specified person from the address book. Irreversible.<br>
