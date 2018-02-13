@@ -122,6 +122,20 @@ public class UniquePersonList implements Iterable<Person> {
         }
     }
 
+    /**
+     * Edit the person's details from the list.
+     *
+     * @throws DuplicatePersonException if the person's new profile matchs with an existing person in the list.
+     * @throws PersonNotFoundException if no such person could be found in the list.
+     */
+
+    public void edit(ReadOnlyPerson oldProfile, Person newProfile) throws PersonNotFoundException,DuplicatePersonException {
+        if (contains(newProfile)) {
+            throw new DuplicatePersonException();
+        }
+        this.remove(oldProfile);
+        internalList.add(newProfile);
+    }
 
     /**
      * Clears all persons in list.

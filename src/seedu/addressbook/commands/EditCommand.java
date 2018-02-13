@@ -10,18 +10,17 @@ import seedu.addressbook.data.person.*;
 public class EditCommand extends Command {
     public static final String COMMAND_WORD = "edit";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's information "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's name information "
             + "identified by the index number in the last shown person listing.\n"
-            + "Parameters: i/INDEX NEW_NAME \n"
+            + "Parameters: NEW_NAME i/INDEX \n"
             + "Example: " + COMMAND_WORD 
-            + "i/1 John Doe ";
+            + "John Doe i/1";
 
     public static final String MESSAGE_DUPLICATE_PERSON = "You can't change a person into an already existing one in the address book";
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Person: %1$s";
-
-
-
-    private Person newPerson;
+    
+    private Person newProfile;
+    private ReadOnlyPerson oldProfile;
     private Name NEW_NAME;
     
     public EditCommand(int targetVisibleIndex,String newName) throws IllegalValueException {
@@ -33,11 +32,11 @@ public class EditCommand extends Command {
     @Override
     public CommandResult execute() {
         try {
-            final ReadOnlyPerson OldPerson = getTargetPerson();
-            this.newPerson = (Person) OldPerson;
-            this.newPerson.setName(NEW_NAME);
-            addressBook.editPerson(OldPerson, newPerson);
-            return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, OldPerson));
+            oldProfile = getTargetPerson();
+            newProfile = (Person) oldProfile;
+            newProfile.setName(NEW_NAME);
+            addressBook.editPerson(oldProfile, newProfile);
+            return new CommandResult(String.format(MESSAGE_EDIT_PERSON_SUCCESS, oldProfile));
 
         } catch (IndexOutOfBoundsException ie) {
             return new CommandResult(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
