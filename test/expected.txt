@@ -293,6 +293,81 @@
 || 
 || 2 persons listed!
 || ===================================================
+|| Enter command: || [Command entered:  edit wrong args wrong args]
+|| Invalid command format! 
+|| edit: Edit a person's name information identified by the index number in the last shown person listing. (just the name)
+|| Parameters: NEW_NAME i/INDEX 
+|| Example: edit John Doe i/1
+|| ===================================================
+|| Enter command: || [Command entered:  edit Valid Name 1 ]
+|| Invalid command format! 
+|| edit: Edit a person's name information identified by the index number in the last shown person listing. (just the name)
+|| Parameters: NEW_NAME i/INDEX 
+|| Example: edit John Doe i/1
+|| ===================================================
+|| Enter command: || [Command entered:  edit []\[;] p/12345 i/1]
+|| Invalid command format! 
+|| edit: Edit a person's name information identified by the index number in the last shown person listing. (just the name)
+|| Parameters: NEW_NAME i/INDEX 
+|| Example: edit John Doe i/1
+|| ===================================================
+|| Enter command: || [Command entered:  edit Valid Name i/not_numbers]
+|| The person index provided is invalid
+|| ===================================================
+|| Enter command: || [Command entered:  edit Adam Brownie i/1]
+|| Edited Complete, new profile : Adam Brownie Phone: (private) 222222 Email: (private) benchoo@nus.edu.sg Address: (private) 222, beta street Tags: [secretive]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brownie Tags: [secretive]
+|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 
+|| 2 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  edit Betsy Choocolat i/2]
+|| Edited Complete, new profile : Betsy Choocolat Phone: 444444 Email: (private) dickson@nus.edu.sg Address: 444, delta street Tags: [friends]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brownie Tags: [secretive]
+|| 	2. Betsy Choocolat Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 
+|| 2 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
+|| New person added: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| ===================================================
+|| Enter command: || [Command entered:  add Esther Fries p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
+|| New person added: Esther Fries Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brownie Tags: [secretive]
+|| 	2. Betsy Choocolat Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	3. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	4. Esther Fries Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 
+|| 4 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  edit Esther Potato i/4]
+|| You can't change a person into an already existing one in the address book
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brownie Tags: [secretive]
+|| 	2. Betsy Choocolat Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	3. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	4. Esther Fries Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 
+|| 4 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  edit Esther Potato i/3]
+|| Edited Complete, new profile : Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| ===================================================
+|| Enter command: || [Command entered:  list ]
+|| 	1. Adam Brownie Tags: [secretive]
+|| 	2. Betsy Choocolat Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	3. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	4. Esther Fries Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 
+|| 4 persons listed!
+|| ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
 || ===================================================
