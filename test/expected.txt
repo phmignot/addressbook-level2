@@ -12,6 +12,9 @@
 || delete: Deletes the person identified by the index number used in the last person listing.
 || Parameters: INDEX
 || Example: delete 1
+|| edit: Edit a person's name information identified by the index number in the last shown person listing. (just the name)
+|| Parameters: NEW_NAME i/INDEX 
+|| Example: edit John Doe i/1
 || Clears address book permanently.
 || Example: clear
 || find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
