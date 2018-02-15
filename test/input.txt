@@ -21,6 +21,7 @@
   # address book should be emptied
   clear
   list
+  sort
 
 ##########################################################
 # test add person command, setup state for futuer tests
@@ -54,6 +55,16 @@
   # should not allow adding duplicate persons
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
 
+##########################################################
+# test sort command
+##########################################################
+
+  # should return the addressbook sorted by name
+  sort
+  
+  # sould not have modify the original addressbook indexing
+  list
+  
 ##########################################################
 # test view/viewall persons command
 ##########################################################
