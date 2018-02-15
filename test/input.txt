@@ -59,9 +59,23 @@
 # test sort command
 ##########################################################
 
-  # should return the addressbook sorted by name
+  # should return the addressbook sorted by name    
+  add Arthur King p/666666 e/arthur@king pa/666, devil street 
   sort
   
+  # should sort correctly by the entire Name
+  add Betsy Choocolat p/77777 e/betsy@chocolat a/777, Jackpot
+  sort
+  
+  # should be case sensitive
+  add charlie bickson pp/444445 e/charlie.b@nus.edu.sg a/335, gamma street t/friends t/school
+  add CHARLIE sickson pp/444446 e/charlie.s@nus.edu.sg a/336, gamma street t/friends t/school
+  sort
+  
+  # should be able to sort identical name
+  add Esther Potato p/888888 e/estherComeBack@really.not.a.potato pa/888, epsilon street t/backForMore
+  sort
+    
   # sould not have modify the original addressbook indexing
   list
   
