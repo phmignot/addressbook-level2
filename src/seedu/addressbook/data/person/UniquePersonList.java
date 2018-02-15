@@ -81,6 +81,14 @@ public class UniquePersonList implements Iterable<Person> {
         return Collections.unmodifiableList(internalList);
     }
 
+    /**
+     * Sorts the UniquePerson List by Name
+     */
+    public void sortUniquePersonList(){
+        Collections.sort(internalList);
+    }
+    
+    
 
     /**
      * Checks if the list contains an equivalent person as the given argument.
