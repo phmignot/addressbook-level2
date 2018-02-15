@@ -21,11 +21,11 @@ public class EditCommand extends Command {
     
     private Person newProfile;
     private Person oldProfile;
-    private Name NEW_NAME;
+    private Name newName;
     
     public EditCommand(String newName, int targetVisibleIndex) throws IllegalValueException {
         super(targetVisibleIndex);
-        this.NEW_NAME= new Name(newName);
+        this.newName= new Name(newName);
     }
     
 
@@ -45,7 +45,7 @@ public class EditCommand extends Command {
     private void InitiateProfiles() throws IndexOutOfBoundsException {
         oldProfile = (Person) getTargetPerson();
         newProfile = new Person(oldProfile);
-        newProfile.setName(NEW_NAME);
+        newProfile.setName(newName);
     }
 }
 
