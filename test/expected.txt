@@ -144,14 +144,68 @@
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
 || This person already exists in the address book
 || ===================================================
+|| Enter command: || [Command entered:  add Arthur King p/666666 e/arthur@king pa/666, devil street ]
+|| New person added: Arthur King Phone: 666666 Email: arthur@king Address: (private) 666, devil street Tags: 
+|| ===================================================
 || Enter command: || [Command entered:  sort]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
-|| 	2. Betsy Choo Tags: [secretive]
-|| 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-|| 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-|| 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	2. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
 || 
-|| 5 persons listed!
+|| 6 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  add Betsy Choocolat p/77777 e/betsy@chocolat a/777, Jackpot]
+|| New person added: Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	5. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	6. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	7. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 
+|| 7 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  add charlie bickson pp/444445 e/charlie.b@nus.edu.sg a/335, gamma street t/friends t/school]
+|| New person added: charlie bickson Phone: (private) 444445 Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| ===================================================
+|| Enter command: || [Command entered:  add CHARLIE sickson pp/444446 e/charlie.s@nus.edu.sg a/336, gamma street t/friends t/school]
+|| New person added: CHARLIE sickson Phone: (private) 444446 Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	5. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	6. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	7. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	8. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	9. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 
+|| 9 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  add Esther Potato p/888888 e/estherComeBack@really.not.a.potato pa/888, epsilon street t/backForMore]
+|| New person added: Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Address: (private) 888, epsilon street Tags: [backForMore]
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	5. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	6. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	7. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	8. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	9. Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Tags: [backForMore]
+|| 	10. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 
+|| 10 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
@@ -159,8 +213,13 @@
 || 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	6. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	7. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	8. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 	9. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	10. Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Tags: [backForMore]
 || 
-|| 5 persons listed!
+|| 10 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  view]
 || Invalid command format! 
@@ -186,7 +245,7 @@
 || Enter command: || [Command entered:  view 0]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  view 6]
+|| Enter command: || [Command entered:  view 20]
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  viewall -1]
@@ -195,7 +254,7 @@
 || Enter command: || [Command entered:  viewall 0]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  viewall 6]
+|| Enter command: || [Command entered:  viewall 20]
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  view 1]
@@ -242,8 +301,9 @@
 || ===================================================
 || Enter command: || [Command entered:  find Betsy]
 || 	1. Betsy Choo Tags: [secretive]
+|| 	2. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
 || 
-|| 1 persons listed!
+|| 2 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Dickson]
 || 	1. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
@@ -254,8 +314,9 @@
 || Enter command: || [Command entered:  find Charlie Betsy]
 || 	1. Betsy Choo Tags: [secretive]
 || 	2. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	3. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
 || 
-|| 2 persons listed!
+|| 3 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete]
 || Invalid command format! 
@@ -272,7 +333,7 @@
 || Enter command: || [Command entered:  delete 0]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  delete 3]
+|| Enter command: || [Command entered:  delete 4]
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  delete 2]
@@ -292,8 +353,13 @@
 || 	2. Betsy Choo Tags: [secretive]
 || 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	5. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	6. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	7. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 	8. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	9. Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Tags: [backForMore]
 || 
-|| 4 persons listed!
+|| 9 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
 || Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
@@ -302,8 +368,13 @@
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
 || 	2. Betsy Choo Tags: [secretive]
 || 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	4. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	5. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	6. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 	7. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	8. Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Tags: [backForMore]
 || 
-|| 3 persons listed!
+|| 8 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 1]
 || Deleted Person: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
@@ -311,8 +382,13 @@
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo Tags: [secretive]
 || 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	3. Arthur King Phone: 666666 Email: arthur@king Tags: 
+|| 	4. Betsy Choocolat Phone: 77777 Email: betsy@chocolat Address: 777, Jackpot Tags: 
+|| 	5. charlie bickson Email: charlie.b@nus.edu.sg Address: 335, gamma street Tags: [school][friends]
+|| 	6. CHARLIE sickson Email: charlie.s@nus.edu.sg Address: 336, gamma street Tags: [school][friends]
+|| 	7. Esther Potato Phone: 888888 Email: estherComeBack@really.not.a.potato Tags: [backForMore]
 || 
-|| 2 persons listed!
+|| 7 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
