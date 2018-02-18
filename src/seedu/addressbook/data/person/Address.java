@@ -19,11 +19,19 @@ public class Address extends Contact {
      */
     public Address(String address, boolean isPrivate) throws IllegalValueException {
         String trimmedAddress = address.trim();
-        this.isPrivate = isPrivate;
+        setPrivate(isPrivate);
         if (!isValidAddress(trimmedAddress)) {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS);
         }
-        this.value = trimmedAddress;
+        setValue(trimmedAddress);
+    }
+
+
+    @Override
+    public boolean equals(Object other) {
+        return other == this // short circuit if same object
+                || (other instanceof Address // instanceof handles nulls
+                && this.getValue().equals(((Address) other).getValue())); // state check
     }
 
     /**
