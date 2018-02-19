@@ -5,7 +5,12 @@ import org.junit.Test;
 import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.exception.IllegalValueException;
-import seedu.addressbook.data.person.*;
+import seedu.addressbook.data.person.Person;
+import seedu.addressbook.data.person.ReadOnlyPerson;
+import seedu.addressbook.data.person.Name;
+import seedu.addressbook.data.person.Phone;
+import seedu.addressbook.data.person.Email;
+import seedu.addressbook.data.person.Address;
 import seedu.addressbook.data.tag.UniqueTagList;
 import seedu.addressbook.ui.TextUi;
 import seedu.addressbook.util.TestUtil;
@@ -13,7 +18,6 @@ import seedu.addressbook.util.TestUtil;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class EditCommandTest {
 
@@ -122,7 +126,7 @@ public class EditCommandTest {
      * Asserts that the person at the specified index can be successfully edited.
      *
      *
-     * @throws UniquePersonList.DuplicatePersonException if the new profile of the selected person is matching with 
+     * @throws IllegalValueException if the new profile of the selected person is matching with 
      * another person in the address book.
      */
     private void assertEditSuccessful(String editName, int targetVisibleIndex, AddressBook addressBook,
