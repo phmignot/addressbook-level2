@@ -2,7 +2,9 @@ package seedu.addressbook.commands;
 
 import seedu.addressbook.common.Messages;
 import seedu.addressbook.data.exception.IllegalValueException;
-import seedu.addressbook.data.person.*;
+import seedu.addressbook.data.person.Person;
+import seedu.addressbook.data.person.Name;
+import seedu.addressbook.data.person.UniquePersonList;
 
 /**
  * Edit a person's information from the address book.
