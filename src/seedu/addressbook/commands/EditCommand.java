@@ -21,8 +21,11 @@ public class EditCommand extends Command {
     public static final String MESSAGE_DUPLICATE_PERSON = "You can't change a person into an already existing one in the address book";
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Complete, new profile : %1$s";
     
-    private Person newProfile;
+    
+    //The oldProfile is the actual profile of the person
     private Person oldProfile;
+    //The newProfile is the future profile of the person after editing
+    private Person newProfile;
     private Name newName;
     
     public EditCommand(String newName, int targetVisibleIndex) throws IllegalValueException {
@@ -43,9 +46,30 @@ public class EditCommand extends Command {
             return new CommandResult(MESSAGE_DUPLICATE_PERSON);
         }
     }
+
+    /**
+     * Initiates the two profiles, oldProfile and newProfile of the person.
+     *
+     * @throws IndexOutOfBoundsException if incorrect index given to get the 
+     * targeted person
+     */
     
     private void InitiateProfiles() throws IndexOutOfBoundsException {
+        generateOldProfile();
+        generateNewProfile();
+    }
+
+    /**
+     * Creates the OldProfile
+     */
+    private void generateOldProfile() {
         oldProfile = (Person) getTargetPerson();
+    }
+    
+    /**
+     * Creates the newProfile from OldProfile.
+     */
+    private void generateNewProfile() {
         newProfile = new Person(oldProfile);
         newProfile.setName(newName);
     }
